@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="595.0" prefWidth="475.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SchedulingApplication.Controller.UpdateAppointmentController">
+    <children>
+        <AnchorPane layoutX="53.0" layoutY="14.0" prefHeight="76.0" prefWidth="369.0" style="-fx-background-color: #003057; -fx-background-radius: 15;">
+            <children>
+                <Label layoutX="15.0" prefHeight="45.0" prefWidth="340.0" text="Western Governors University" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Label layoutX="119.0" layoutY="45.0" prefHeight="20.0" prefWidth="132.0" text="Consulting Services" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="25.0" layoutY="103.0" prefHeight="473.0" prefWidth="423.0" style="-fx-background-color: #4986AD; -fx-background-radius: 15;">
+            <children>
+                <Label layoutX="86.0" layoutY="14.0" text="Update Appointments" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Label layoutX="22.0" layoutY="65.0" text="Appointment ID:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+                <Label layoutX="21.0" layoutY="103.0" text="Title:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+                <Label layoutX="21.0" layoutY="140.0" text="Description:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+                <Label layoutX="21.0" layoutY="178.0" text="Location:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+                <Label layoutX="23.0" layoutY="215.0" text="Contact:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+                <Label layoutX="23.0" layoutY="253.0" text="Type:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+                <Label layoutX="23.0" layoutY="290.0" text="Start Date/Time:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+                <Label layoutX="23.0" layoutY="327.0" text="End Date/Time:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+                <Label layoutX="23.0" layoutY="364.0" text="Customer:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+                <Label layoutX="23.0" layoutY="402.0" text="User:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+                <TextField fx:id="txtUpdateID" disable="true" layoutX="123.0" layoutY="61.0" />
+                <TextField fx:id="txtUpdateTitle" layoutX="123.0" layoutY="99.0" />
+                <TextField fx:id="txtUpdateDescription" layoutX="123.0" layoutY="136.0" />
+                <TextField fx:id="txtUpdateLocation" layoutX="123.0" layoutY="174.0" />
+                <TextField fx:id="txtUpdateType" layoutX="123.0" layoutY="249.0" />
+                <ComboBox fx:id="comboUpdateContact" layoutX="123.0" layoutY="211.0" prefWidth="150.0" />
+                <ComboBox fx:id="comboUpdateStartTime" layoutX="288.0" layoutY="286.0" prefHeight="25.0" prefWidth="112.0" />
+                <ComboBox fx:id="comboUpdateEndTime" layoutX="288.0" layoutY="323.0" prefHeight="25.0" prefWidth="112.0" />
+                <ComboBox fx:id="comboUpdateCustomer" layoutX="123.0" layoutY="360.0" prefWidth="150.0" />
+                <DatePicker fx:id="dateUpdateStartDate" layoutX="123.0" layoutY="286.0" prefHeight="25.0" prefWidth="150.0" />
+                <DatePicker fx:id="dateUpdateEndDate" layoutX="123.0" layoutY="323.0" prefHeight="25.0" prefWidth="150.0" />
+                <ComboBox fx:id="comboUpdateUser" layoutX="123.0" layoutY="398.0" prefWidth="150.0" />
+                <Button layoutX="221.0" layoutY="436.0" mnemonicParsing="false" onMouseClicked="#cancelUpdateAppointment" text="Cancel" />
+                <Button layoutX="169.0" layoutY="436.0" mnemonicParsing="false" onMouseClicked="#saveUpdateAppointment" text="Save" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

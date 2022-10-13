@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="552.0" prefWidth="954.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SchedulingApplication.Controller.MainCalenderController">
+   <children>
+      <AnchorPane layoutX="25.0" layoutY="100.0" prefHeight="434.0" prefWidth="904.0" style="-fx-background-color: #4986AD; -fx-background-radius: 15;">
+         <children>
+            <TableView fx:id="AppointmentsTableView" layoutX="24.0" layoutY="63.0" prefHeight="319.0" prefWidth="858.0">
+              <columns>
+                <TableColumn fx:id="AppointmentIDColumn" prefWidth="104.0" text="Appointment ID" />
+                <TableColumn fx:id="AppointmentTitleColumn" prefWidth="72.0" text="Title" />
+                  <TableColumn fx:id="AppointmentDescriptionColumn" prefWidth="81.0" text="Description" />
+                  <TableColumn fx:id="AppointmentLocationColumn" prefWidth="81.0" text="Location" />
+                  <TableColumn fx:id="AppointmentContactColumn" prefWidth="99.0" text="Contact" />
+                  <TableColumn fx:id="AppointmentTypeColumn" prefWidth="82.0" text="Type" />
+                  <TableColumn fx:id="AppointmentStartColumn" prefWidth="129.0" text="Start Date/Time" />
+                  <TableColumn fx:id="AppointmentEndColumn" prefWidth="129.0" text="End Date/Time" />
+                  <TableColumn fx:id="AppointmentCustomerIDColumn" prefWidth="79.0" text="Customer ID" />
+              </columns>
+            </TableView>
+            <RadioButton layoutX="79.0" layoutY="23.0" mnemonicParsing="false" onMouseClicked="#appMonthlyRB" selected="true" text="This Month" textFill="WHITE">
+               <toggleGroup>
+                  <ToggleGroup fx:id="calenderFilter" />
+               </toggleGroup>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></RadioButton>
+            <RadioButton layoutX="180.0" layoutY="23.0" mnemonicParsing="false" onMouseClicked="#appWeeklyRB" text="This Week" textFill="WHITE" toggleGroup="$calenderFilter">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></RadioButton>
+            <Button layoutX="717.0" layoutY="394.0" mnemonicParsing="false" onMouseClicked="#openAddAppointments" text="Add" />
+            <Button layoutX="765.0" layoutY="394.0" mnemonicParsing="false" onMouseClicked="#openUpdateAppointments" text="Update" />
+            <Label layoutX="323.0" layoutY="14.0" text="Appointment Calender" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="24.0" layoutY="394.0" mnemonicParsing="false" onMouseClicked="#openCustomerMenu" text="Customer Menu" />
+            <Button layoutX="135.0" layoutY="394.0" mnemonicParsing="false" onMouseClicked="#openReports" text="Reports" />
+            <Button layoutX="831.0" layoutY="394.0" mnemonicParsing="false" onMouseClicked="#deleteAppointment" text="Delete" />
+            <RadioButton layoutX="24.0" layoutY="23.0" mnemonicParsing="false" onMouseClicked="#appAllRB" selected="true" text="All" textFill="WHITE" toggleGroup="$calenderFilter">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="293.0" layoutY="14.0" prefHeight="76.0" prefWidth="369.0" style="-fx-background-color: #003057; -fx-background-radius: 15;">
+         <children>
+            <Label layoutX="15.0" prefHeight="45.0" prefWidth="340.0" text="Western Governors University" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="119.0" layoutY="45.0" prefHeight="20.0" prefWidth="132.0" text="Consulting Services" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

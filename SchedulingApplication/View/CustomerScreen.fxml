@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="552.0" prefWidth="954.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SchedulingApplication.Controller.CustomerScreenController">
+    <children>
+        <AnchorPane layoutX="25.0" layoutY="100.0" prefHeight="434.0" prefWidth="904.0" style="-fx-background-color: #4986AD; -fx-background-radius: 15;">
+            <children>
+                <TableView fx:id="CustomersTableView" layoutX="24.0" layoutY="63.0" prefHeight="319.0" prefWidth="858.0">
+                    <columns>
+                        <TableColumn fx:id="CustomerIDColumn" prefWidth="50.0" text="ID" />
+                        <TableColumn fx:id="CustomerNameColumn" prefWidth="154.0" text="Name" />
+                        <TableColumn fx:id="CustomerAddressColumn" prefWidth="154.0" text="Address" />
+                        <TableColumn fx:id="CustomerPostalColumn" prefWidth="117.0" text="Postal Code" />
+                        <TableColumn fx:id="CustomerPhoneColumn" prefWidth="138.0" text="Phone Number" />
+                        <TableColumn fx:id="CustomerCountryColumn" prefWidth="118.0" text="Country" />
+                        <TableColumn fx:id="CustomerDivisionColumn" minWidth="0.0" prefWidth="125.0" text="First-Level Division" />
+                    </columns>
+                </TableView>
+                <Button layoutX="717.0" layoutY="394.0" mnemonicParsing="false" onMouseClicked="#openAddCustomer" text="Add" />
+                <Button layoutX="765.0" layoutY="394.0" mnemonicParsing="false" onMouseClicked="#openUpdateCustomer" text="Update" />
+                <Label layoutX="362.0" layoutY="14.0" text="Customer Menu" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Button layoutX="24.0" layoutY="394.0" mnemonicParsing="false" onMouseClicked="#returnAppointmentsMenu" text="Return" />
+                <Button layoutX="831.0" layoutY="394.0" mnemonicParsing="false" onMouseClicked="#deleteCustomer" text="Delete" />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="293.0" layoutY="14.0" prefHeight="76.0" prefWidth="369.0" style="-fx-background-color: #003057; -fx-background-radius: 15;">
+            <children>
+                <Label layoutX="15.0" prefHeight="45.0" prefWidth="340.0" text="Western Governors University" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Label layoutX="119.0" layoutY="45.0" prefHeight="20.0" prefWidth="132.0" text="Consulting Services" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
